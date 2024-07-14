@@ -1,0 +1,14 @@
+{
+  "hosting": {
+    "public": "public",
+    "hosting": {
+      "site": "aptitude-cheatsheet5",
+      "public": "public"
+    },
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
