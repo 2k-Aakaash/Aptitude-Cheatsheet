@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Aptitude Cheatsheet</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">Cheatsheet</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4">Technical Aptitude Cheatsheet</h1>
+            <p class="lead">Master key technical concepts and problem-solving skills</p>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <section id="programming">
+            <h2>Programming</h2>
+            <p>Improve your programming skills with these fundamental concepts.</p>
+
+            <div class="card mb-3">
+                <div class="card-header">
+                    <h5>Data Structures</h5>
+                </div>
+                <div class="card-body">
+                    <p>Learn about different data structures and their applications.</p>
+                    <h6>Example Problem 1:</h6>
+                    <p>Explain the difference between a stack and a queue.</p>
+                    <h6>Solution:</h6>
+                    <p>A stack follows LIFO (Last In, First Out) order, while a queue follows FIFO (First In, First Out) order.</p>
+                    
+                    <h6>Example Problem 2:</h6>
+                    <p>What is a binary tree, and how does it differ from a binary search tree?</p>
+                    <h6>Solution:</h6>
+                    <p>A binary tree is a tree data structure where each node has at most two children. A binary search tree is a binary tree with the additional property that for each node, all elements in the left subtree are less than the node and all elements in the right subtree are greater.</p>
+
+                    <h6>Example Problem 3:</h6>
+                    <p>What are the advantages of using a linked list over an array?</p>
+                    <h6>Solution:</h6>
+                    <p>Linked lists allow for dynamic memory allocation and efficient insertions/deletions. Arrays have fixed size and can be costly to resize.</p>
+                    
+                    <h6>Shortcuts, Tips, and Tricks:</h6>
+                    <ul>
+                        <li>Use stacks for problems involving recursion or backtracking.</li>
+                        <li>Use queues for problems involving breadth-first search or level-order traversal.</li>
+                        <li>Understand the properties and applications of different data structures to choose the right one for your problem.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-header">
+                    <h5>Algorithms</h5>
+                </div>
+                <div class="card-body">
+                    <p>Understand various algorithms and their complexities.</p>
+                    <h6>Example Problem 1:</h6>
+                    <p>What is the time complexity of binary search?</p>
+                    <h6>Solution:</h6>
+                    <p>The time complexity of binary search is O(log n).</p>
+
+                    <h6>Example Problem 2:</h6>
+                    <p>Describe the difference between a greedy algorithm and a dynamic programming algorithm.</p>
+                    <h6>Solution:</h6>
+                    <p>A greedy algorithm makes locally optimal choices at each step with the hope of finding the global optimum. Dynamic programming solves problems by breaking them down into simpler subproblems and solving each subproblem only once, storing the results for future use.</p>
+
+                    <h6>Example Problem 3:</h6>
+                    <p>Explain the divide-and-conquer strategy with an example.</p>
+                    <h6>Solution:</h6>
+                    <p>The divide-and-conquer strategy involves breaking a problem into smaller subproblems, solving each subproblem independently, and combining their solutions to solve the original problem. An example is the Merge Sort algorithm.</p>
+
+                    <h6>Shortcuts, Tips, and Tricks:</h6>
+                    <ul>
+                        <li>For optimization problems, consider using dynamic programming to avoid redundant calculations.</li>
+                        <li>Use greedy algorithms for problems where local optimization leads to global optimization.</li>
+                        <li>Understand the time and space complexity of different algorithms to choose the most efficient one for your problem.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="databases" class="mt-5">
+            <h2>Databases</h2>
+            <p>Learn about database concepts and SQL.</p>
+
+            <div class="card mb-3">
+                <div class="card-header">
+                    <h5>SQL Queries</h5>
+                </div>
+                <div class="card-body">
+                    <p>Write efficient SQL queries to manage and retrieve data.</p>
+                    <h6>Example Problem:</h6>
+                    <p>Write an SQL query to find the second highest salary from the Employee table.</p>
+                    <h6>Solution:</h6>
+                    <p>
+                        <code>
+                        SELECT MAX(Salary) AS SecondHighestSalary<br>
+                        FROM Employee<br>
+                        WHERE Salary &lt; (SELECT MAX(Salary) FROM Employee);
+                        </code>
+                    </p>
+                    
+                    <h6>Example Problem 2:</h6>
+                    <p>How do you retrieve the last 5 records from a table in SQL?</p>
+                    <h6>Solution:</h6>
+                    <p>
+                        <code>
+                        SELECT * FROM Employee<br>
+                        ORDER BY id DESC<br>
+                        LIMIT 5;
+                        </code>
+                    </p>
+                    
+                    <h6>Shortcuts, Tips, and Tricks:</h6>
+                    <ul>
+                        <li>Use indexed columns in your WHERE clause to speed up query performance.</li>
+                        <li>Use JOINs to combine data from multiple tables based on a related column.</li>
+                        <li>Utilize aggregate functions like COUNT, SUM, AVG, MAX, and MIN to perform calculations on data.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-header">
+                    <h5>Normalization</h5>
+                </div>
+                <div class="card-body">
+                    <p>Understand the process of normalizing a database to eliminate redundancy.</p>
+                    <h6>Example Problem:</h6>
+                    <p>What is the difference between 2NF and 3NF?</p>
+                    <h6>Solution:</h6>
+                    <p>2NF (Second Normal Form) eliminates partial dependencies, while 3NF (Third Normal Form) eliminates transitive dependencies.</p>
+
+                    <h6>Shortcuts, Tips, and Tricks:</h6>
+                    <ul>
+                        <li>To achieve 1NF, ensure that the values in each column are atomic and the table has a primary key.</li>
+                        <li>To achieve 2NF, make sure the table is in 1NF and all non-key attributes are fully functional dependent on the primary key.</li>
+                        <li>To achieve 3NF, ensure the table is in 2NF and all attributes are directly dependent on the primary key, not on other non-key attributes.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="networks" class="mt-5">
+            <h2>Networks</h2>
+            <p>Gain knowledge about network protocols and architectures.</p>
+
+            <div class="card mb-3">
+                <div class="card-header">
+                    <h5>OSI Model</h5>
+                </div>
+                <div class="card-body">
+                    <p>Understand the seven layers of the OSI model and their functions.</p>
+                    <h6>Example Problem:</h6>
+                    <p>What is the primary function of the Transport layer in the OSI model?</p>
+                    <h6>Solution:</h6>
+                    <p>The Transport layer is responsible for end-to-end communication and error handling.</p>
+                    
+                    <h6>Example Problem 2:</h6>
+                    <p>Explain the function of the Network layer in the OSI model.</p>
+                    <h6>Solution:</h6>
+                    <p>The Network layer is responsible for logical addressing and routing, ensuring data can be sent from one network to another.</p>
+
+                    <h6>Shortcuts, Tips, and Tricks:</h6>
+                    <ul>
+                        <li>Remember the OSI layers with the mnemonic: "Please Do Not Throw Sausage Pizza Away" (Physical, Data Link, Network, Transport, Session, Presentation, Application).</li>
+                        <li>Understand the functions of each layer to troubleshoot networking issues more effectively.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-header">
+                    <h5>TCP/IP Protocol</h5>
+                </div>
+                <div class="card-body">
+                    <p>Learn about the TCP/IP protocol suite and its layers.</p>
+                    <h6>Example Problem:</h6>
+                    <p>What is the difference between TCP and UDP?</p>
+                    <h6>Solution:</h6>
+                    <p>TCP is connection-oriented and reliable, while UDP is connectionless and faster but less reliable.</p>
+                    
+                    <h6>Example Problem 2:</h6>
+                    <p>What is the primary function of the Internet layer in the TCP/IP model?</p>
+                    <h6>Solution:</h6>
+                    <p>The Internet layer is responsible for logical addressing and routing of packets across networks.</p>
+
+                    <h6>Shortcuts, Tips, and Tricks:</h6>
+                    <ul>
+                        <li>Use TCP for applications where reliability is critical, like file transfers and web browsing.</li>
+                        <li>Use UDP for applications where speed is more important than reliability, like streaming and gaming.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Cheatsheet for Aptitude Questions. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
